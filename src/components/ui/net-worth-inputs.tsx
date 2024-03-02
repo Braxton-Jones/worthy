@@ -31,31 +31,31 @@ export function NetworthInputs() {
                 <div className="flex gap-2 flex-col pb-2">
                 <div className="flex items-center gap-8">
                     <Label htmlFor="checking" className="w-full ml-5">Checking</Label>
-                    <Input id="checking" type="number" placeholder="$0.00"/>
+                    <Input id="checking" type="number" placeholder="$0.00" onChange={(e) => updateChecking(e.currentTarget.value as unknown as number)}/>
                 </div>
                 <div className="flex items-center gap-8">
                     <Label htmlFor="savings" className="w-full ml-5">Savings</Label>
-                    <Input id="savings" type="number" placeholder="$0.00"/>
+                    <Input id="savings" type="number" placeholder="$0.00" onChange={(e) => updateSavings(e.currentTarget.value as unknown as number)}/>
                 </div>
                 <div className="flex items-center gap-8">
                     <Label htmlFor="investments" className="w-full ml-5">Investments</Label>
-                    <Input id="investments" type="number" placeholder="$0.00"/>
+                    <Input id="investments" type="number" placeholder="$0.00" onChange={(e) => updateInvestments(e.currentTarget.value as unknown as number)}/>
                 </div>
                 <div className="flex items-center gap-8">
                     <Label htmlFor="vehicles" className="w-full ml-5">Vehicles</Label>
-                    <Input id="vehicles" type="number" placeholder="$0.00"/>
+                    <Input id="vehicles" type="number" placeholder="$0.00" onChange={(e) => updateVehicles(e.currentTarget.value as unknown as number)}/>
                 </div>
                 <div className="flex items-center gap-8">
                     <Label htmlFor="realEstate" className="w-full ml-5">Real Estate</Label>
-                    <Input id="realEstate" type="number" placeholder="$0.00"/>
+                    <Input id="realEstate" type="number" placeholder="$0.00" onChange={(e) => updateRealEstate(e.currentTarget.value as unknown as number)}/>
                 </div>
                 <div className="flex items-center gap-8">
                     <Label htmlFor="personalProperty" className="w-full ml-5">Personal Property</Label>
-                    <Input id="personalProperty" type="number" placeholder="$0.00"/>
+                    <Input id="personalProperty" type="number" placeholder="$0.00" onChange={(e) => updatePersonalProperty(e.currentTarget.value as unknown as number)}/>
                 </div>
                 <div className="flex items-center gap-8">
                     <Label htmlFor="otherAssets" className="w-full ml-5">Other Assets</Label>
-                    <Input id="otherAssets" type="number" placeholder="$0.00"/>
+                    <Input id="otherAssets" type="number" placeholder="$0.00" onChange={(e) => updateOtherAssets(e.currentTarget.value as unknown as number)}/>
                 </div>
 
 
@@ -80,27 +80,38 @@ export function NetworthInputs() {
                     id="creditCard" 
                     type="number" 
                     placeholder="$0.00" 
+                    onChange={(e) => updateCreditCard(e.currentTarget.value as unknown as number)}
                 />
                     </div>
                 <div className="flex items-center gap-8">
                     <Label htmlFor="autoLoans" className="w-full ml-5">Auto Loans</Label>
-                    <Input id="autoLoans" type="number" placeholder="$0.00"/>
+                    <Input id="autoLoans" type="number" placeholder="$0.00"
+                    onChange={(e) => updateAutoLoans(e.currentTarget.value as unknown as number)}
+                    />
                     </div>
                 <div className="flex items-center gap-8">
                     <Label htmlFor="studentLoans" className="w-full ml-5">Student Loans</Label>
-                    <Input id="studentLoans" type="number" placeholder="$0.00"/>
+                    <Input id="studentLoans" type="number" placeholder="$0.00"
+                    onChange={(e) => updateStudentLoans(e.currentTarget.value as unknown as number)}
+                    />
                     </div>
                 <div className="flex items-center gap-8">
                     <Label htmlFor="personalLoans" className="w-full ml-5">Personal Loans</Label>
-                    <Input id="personalLoans" type="number" placeholder="$0.00"/>
+                    <Input id="personalLoans" type="number" placeholder="$0.00"
+                    onChange={(e) => updatePersonalLoans(e.currentTarget.value as unknown as number)}
+                    />
                     </div>
                 <div className="flex items-center gap-8">
                     <Label htmlFor="mortgage" className="w-full ml-5">Mortgage</Label>
-                    <Input id="mortgage" type="number" placeholder="$0.00"/>
+                    <Input id="mortgage" type="number" placeholder="$0.00"
+                    onChange={(e) => updateMortgage(e.currentTarget.value as unknown as number)}
+                    />
                     </div>
                 <div className="flex items-center gap-8">
                     <Label htmlFor="otherLiabilities" className="w-full ml-5">Other Liabilities</Label>
-                    <Input id="otherLiabilities" type="number" placeholder="$0.00"/>
+                    <Input id="otherLiabilities" type="number" placeholder="$0.00"
+                    onChange={(e) => updateOtherLiabilities(e.currentTarget.value as unknown as number)}
+                    />
                     </div>
                     
 

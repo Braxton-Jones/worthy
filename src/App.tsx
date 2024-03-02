@@ -32,6 +32,25 @@ function App() {
   const { setTheme } = useTheme()
   const checking = useWorthStore((state) => state.checking)
   const savings = useWorthStore((state) => state.savings)
+  const investments = useWorthStore((state) => state.investments)
+  const vehicles = useWorthStore((state) => state.vehicles)
+  const realEstate = useWorthStore((state) => state.realEstate)
+  const personalProperty = useWorthStore((state) => state.personalProperty)
+  const otherAssets = useWorthStore((state) => state.otherAssets)
+  const creditCard = useWorthStore((state) => state.creditCard)
+  const autoLoans = useWorthStore((state) => state.autoLoans)
+  const studentLoans = useWorthStore((state) => state.studentLoans)
+  const personalLoans = useWorthStore((state) => state.personalLoans)
+  const mortgage = useWorthStore((state) => state.mortgage)
+  const otherLiabilities = useWorthStore((state) => state.otherLiabilities)
+
+  function sum(...args: number[]) {
+    return args.reduce((acc, curr) => acc + curr, 0)
+  }
+  const assets = sum(checking, savings, investments, vehicles, realEstate, personalProperty, otherAssets)
+  const liabilities = sum(creditCard, autoLoans, studentLoans, personalLoans, mortgage, otherLiabilities)
+  console.log(assets, liabilities)
+
 
   return (
     <main className="border py-5">
